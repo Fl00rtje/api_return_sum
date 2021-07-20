@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 
 class Number(models.Model):
     num_1 = models.IntegerField(verbose_name="Number 1")
