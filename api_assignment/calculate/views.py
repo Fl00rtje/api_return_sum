@@ -16,11 +16,12 @@ def number_list(request):
         return Response(serializer.data)
 
 
-@api_view(['GET','POST'])
+@api_view(['GET', 'POST'])
 def addition(request):
     """
-    For two given numbers, this function returns the sum.
-    Input: {"input": "100 + 4"}
+    This function takes two numbers from the input and returns the sum of them.
+    Input example: {"input": "100 + 4"}
+    Output: the sum of the numbers as an integer.
     """
     if request.method == 'GET':
         return Response("Please provide input like explained above.")
