@@ -1,0 +1,12 @@
+# ignoring the migrations
+migrations
+
+# ignoring the database
+db.sqlite3
+
+# ignoring pycache
+__pycache__
+*.pyc
+
+# ignoring Pycharm files
+.idea/
