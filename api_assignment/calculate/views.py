@@ -46,8 +46,5 @@ def addition(request):
 
         if serializer.is_valid():
             serializer.save()
-            print(serializer.data)
-            response_data = f"The sum of {serializer.data['num_1']} and {serializer.data['num_2']} is: " \
-                            f"{serializer.data['total']}."
-            return Response(response_data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data["total"], status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
