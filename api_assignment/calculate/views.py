@@ -21,12 +21,12 @@ def addition(request):
     """
     This function takes two numbers from the input and returns the sum of them.
     Input example: {"input": "100 + 4"}
-    Output: the sum of the numbers as an integer.
+    Output: {"num_1": [first number provided], "num_2": [second number provided], "total": [total of the two numbers]}
+    The numbers are all integers.
     """
     if request.method == 'GET':
-        return Response("Please provide input like explained above.")
+        return Response(f"Welcome to the API! Please provide input in the format as explained above.")
     else:
-        request_example = {"input": "100 + 4"}
         try:
             request_data = request.data["input"]
             request_data = request_data.replace(" ", "").split("+")
@@ -35,11 +35,11 @@ def addition(request):
                     "num_2": request_data[1],
                     "total": sum(request_data)}
         except ValueError:
-            content = {'Error message': f"Only provide integers in the string, for example: {request_example}"}
+            content = {'Error message': "Please only provide integers in the string."}
             return Response(content, status=status.HTTP_400_BAD_REQUEST)
         except:
-            content = {'Error message': f"Something unexpected went wrong. "
-                                        f"Please submit your request in this form: {request_example}"}
+            content = {'Error message': "Something unexpected went wrong. "
+                                        "Please provide input in the format as explained above."}
             return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
         serializer = NumberSerializer(data=data)
