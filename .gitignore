@@ -1,5 +1,5 @@
-# ignoring the migrations
-migrations
+# ignoring the migrations but not __init__.py
+migrations/
 
 # ignoring the database
 db.sqlite3
