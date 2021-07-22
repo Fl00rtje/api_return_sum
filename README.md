@@ -1,7 +1,7 @@
 # API 
 
 Welcome!
-This API returns the sum of two numbers.
+This API returns the sum of two numbers. This project is written in Python and the Django REST framework.
 
 ### How to start with the project
 1. Create a new directory
