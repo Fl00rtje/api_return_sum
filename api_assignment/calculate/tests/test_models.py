@@ -1,8 +1,8 @@
-from django.test import TestCase
+from rest_framework.test import APITestCase
 from ..models import Number
 
 
-class NumberTest(TestCase):
+class NumberTest(APITestCase):
     """
         Test module for the Number model.
     """
