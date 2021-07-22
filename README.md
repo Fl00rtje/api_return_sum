@@ -7,10 +7,10 @@ This API returns the sum of two numbers.
 The data format is JSON. This holds for the input as well as for the output.
 
 ### Endpoint
-The endpoint is: http://127.0.0.1:8000/sum/
-
 You can either navigate to the endpoint in your browser and submit the data there or send a request from your terminal.
 The browser version will provide you with some extra information. Check it out! :D
+
+The endpoint is: http://127.0.0.1:8000/sum/
 
 ### Input
 - Please provide as **key** "input".
